@@ -5,10 +5,11 @@ namespace CoreMVCDemo.Controllers
 {
     public class TaskController : Controller
     {
-        TaskRepository taskRepository;
-        public TaskController()
+        ITaskRepository taskRepository;
+        public TaskController(ITaskRepository rep)
         {
-            this.taskRepository = new TaskRepository();
+            this.taskRepository = rep;
+           
         }
          public IActionResult Add()
         {

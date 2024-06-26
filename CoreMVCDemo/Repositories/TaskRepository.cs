@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CoreMVCDemo.Repositories
 {
-    public class TaskRepository
+    public class TaskRepository : ITaskRepository
     {
         private static Models.Task[] tasks = new Models.Task[10];
         private static int index = 0;
@@ -13,8 +13,7 @@ namespace CoreMVCDemo.Repositories
         }
         public Models.Task[] GetAllTasks()
         {
-             
             return tasks;
-        } 
+        }
     }
 }
